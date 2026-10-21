@@ -56,11 +56,23 @@
     </div>
     <div class="repair-tool">
       <div class="glass-sample" aria-hidden="true">
-        <svg viewBox="0 0 200 200" class="impact"><g class="crack" stroke="#13213d" stroke-width="1.4" stroke-opacity=".7" fill="none" stroke-linecap="round">
-          <circle cx="100" cy="100" r="6" fill="#13213d" fill-opacity=".5" stroke="none"/>
-          <path d="M100 100 L132 74 L160 66"/><path d="M100 100 L70 64 L58 30"/><path d="M100 100 L60 118 L22 120"/>
-          <path d="M100 100 L118 140 L130 180"/><path d="M100 100 L150 112 L188 104"/><path d="M100 100 L92 150 L78 176"/>
-        </g></svg>
+        <img class="glass-bg" src="assets/img/carretera.jpg" alt="" loading="lazy">
+        <svg viewBox="0 0 200 200" class="impact">
+          <defs>
+            <filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter>
+            <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+            <radialGradient id="crater"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".45" stop-color="#e9eef5" stop-opacity=".7"/><stop offset=".75" stop-color="#5b6470" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="halo"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".6" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="100" cy="100" r="22" fill="url(#halo)" filter="url(#soft)"/>
+          <g filter="url(#rough)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke="#1d2530" stroke-opacity=".38" transform="translate(.7 .9)"><path d="M100.0 100.0 L112.0 101.1 L124.1 100.8 L136.2 100.6 L148.3 100.7 L160.3 99.5 L172.4 99.3 L184.4 99.5" stroke-width="1.58"/><path d="M148.3 100.7 L156.2 96.0 L163.3 91.4" stroke-width="1.28"/><path d="M100.0 100.0 L111.8 105.5 L123.9 110.1 L136.2 114.5 L148.8 117.5 L161.6 120.0 L173.9 124.1 L186.7 126.8" stroke-width="1.21"/><path d="M136.2 114.5 L140.0 120.7 L145.0 126.8" stroke-width="1.03"/><path d="M100.0 100.0 L105.7 105.2 L111.2 110.5 L116.0 116.6 L121.1 122.4 L125.9 128.3 L130.2 134.7 L135.8 140.0" stroke-width="1.25"/><path d="M100.0 100.0 L101.0 110.1 L103.2 119.9 L105.4 129.8 L107.1 139.8 L109.4 149.6 L111.8 159.4 L112.5 169.5" stroke-width="1.23"/><path d="M100.0 100.0 L97.9 108.1 L96.4 116.2 L94.6 124.4 L93.6 132.6 L91.5 140.7 L90.2 148.9 L89.0 157.2" stroke-width="1.11"/><path d="M94.6 124.4 L95.5 128.6 L98.2 132.9" stroke-width="0.96"/><path d="M100.0 100.0 L94.4 103.9 L88.9 107.9 L83.7 112.2 L77.9 115.8 L72.8 120.3 L67.1 124.0 L62.0 128.5" stroke-width="1.35"/><path d="M77.9 115.8 L73.4 114.7 L70.0 113.6" stroke-width="1.13"/><path d="M100.0 100.0 L87.8 100.5 L75.7 102.7 L63.7 104.6 L51.5 105.6 L39.4 107.9 L27.2 108.3 L15.0 108.1" stroke-width="1.33"/><path d="M63.7 104.6 L58.7 108.0 L53.2 111.3" stroke-width="1.11"/><path d="M100.0 100.0 L90.2 98.1 L80.3 98.0 L70.3 97.2 L60.5 95.8 L50.5 95.2 L40.6 94.8 L30.7 93.5" stroke-width="1.54"/><path d="M50.5 95.2 L45.5 99.1 L40.6 103.0" stroke-width="1.25"/><path d="M100.0 100.0 L94.8 97.4 L90.0 94.2 L84.9 91.4 L80.3 87.9 L75.3 84.9 L70.4 81.9 L65.9 78.3" stroke-width="1.39"/><path d="M75.3 84.9 L68.7 84.8 L61.6 84.6" stroke-width="1.16"/><path d="M100.0 100.0 L96.0 90.5 L93.9 80.5 L91.3 70.5 L87.0 61.2 L83.5 51.5 L79.6 42.0 L75.3 32.7" stroke-width="1.27"/><path d="M91.3 70.5 L84.5 65.2 L75.9 59.9" stroke-width="1.07"/><path d="M100.0 100.0 L102.1 89.5 L103.0 78.7 L103.6 68.0 L104.2 57.2 L107.2 46.9 L109.7 36.4 L112.8 26.1" stroke-width="1.11"/><path d="M100.0 100.0 L105.8 90.6 L113.1 82.3 L118.3 72.5 L124.7 63.5 L131.4 54.7 L138.6 46.3 L145.4 37.5" stroke-width="1.52"/><path d="M100.0 100.0 L110.8 96.8 L121.9 94.2 L132.8 91.6 L143.4 87.6 L154.4 84.8 L165.4 82.1 L176.1 78.6" stroke-width="1.47"/><path d="M154.4 84.8 L156.8 80.8 L158.6 76.9" stroke-width="1.21"/><path d="M109.0 99.6 A9 9 0 0 1 106.9 105.8" stroke-width="1"/><path d="M98.8 91.1 A9 9 0 0 1 103.4 91.7" stroke-width="1"/><path d="M99.2 91.0 A9 9 0 0 1 104.5 92.2" stroke-width="1"/><path d="M91.6 103.3 A9 9 0 0 1 91.6 96.9" stroke-width="1"/><path d="M113.0 107.5 A15 15 0 0 1 105.2 114.1" stroke-width="1"/><path d="M114.7 102.8 A15 15 0 0 1 110.4 110.8" stroke-width="1"/><path d="M85.1 101.8 A15 15 0 0 1 85.8 95.1" stroke-width="1"/><path d="M95.2 85.8 A15 15 0 0 1 103.7 85.5" stroke-width="1"/></g>
+            <g stroke="#ffffff" stroke-opacity=".88"><path d="M100.0 100.0 L112.0 101.1 L124.1 100.8 L136.2 100.6 L148.3 100.7 L160.3 99.5 L172.4 99.3 L184.4 99.5" stroke-width="0.98"/><path d="M148.3 100.7 L156.2 96.0 L163.3 91.4" stroke-width="0.68"/><path d="M100.0 100.0 L111.8 105.5 L123.9 110.1 L136.2 114.5 L148.8 117.5 L161.6 120.0 L173.9 124.1 L186.7 126.8" stroke-width="0.61"/><path d="M136.2 114.5 L140.0 120.7 L145.0 126.8" stroke-width="0.43"/><path d="M100.0 100.0 L105.7 105.2 L111.2 110.5 L116.0 116.6 L121.1 122.4 L125.9 128.3 L130.2 134.7 L135.8 140.0" stroke-width="0.65"/><path d="M100.0 100.0 L101.0 110.1 L103.2 119.9 L105.4 129.8 L107.1 139.8 L109.4 149.6 L111.8 159.4 L112.5 169.5" stroke-width="0.63"/><path d="M100.0 100.0 L97.9 108.1 L96.4 116.2 L94.6 124.4 L93.6 132.6 L91.5 140.7 L90.2 148.9 L89.0 157.2" stroke-width="0.51"/><path d="M94.6 124.4 L95.5 128.6 L98.2 132.9" stroke-width="0.36"/><path d="M100.0 100.0 L94.4 103.9 L88.9 107.9 L83.7 112.2 L77.9 115.8 L72.8 120.3 L67.1 124.0 L62.0 128.5" stroke-width="0.75"/><path d="M77.9 115.8 L73.4 114.7 L70.0 113.6" stroke-width="0.53"/><path d="M100.0 100.0 L87.8 100.5 L75.7 102.7 L63.7 104.6 L51.5 105.6 L39.4 107.9 L27.2 108.3 L15.0 108.1" stroke-width="0.73"/><path d="M63.7 104.6 L58.7 108.0 L53.2 111.3" stroke-width="0.51"/><path d="M100.0 100.0 L90.2 98.1 L80.3 98.0 L70.3 97.2 L60.5 95.8 L50.5 95.2 L40.6 94.8 L30.7 93.5" stroke-width="0.94"/><path d="M50.5 95.2 L45.5 99.1 L40.6 103.0" stroke-width="0.65"/><path d="M100.0 100.0 L94.8 97.4 L90.0 94.2 L84.9 91.4 L80.3 87.9 L75.3 84.9 L70.4 81.9 L65.9 78.3" stroke-width="0.79"/><path d="M75.3 84.9 L68.7 84.8 L61.6 84.6" stroke-width="0.56"/><path d="M100.0 100.0 L96.0 90.5 L93.9 80.5 L91.3 70.5 L87.0 61.2 L83.5 51.5 L79.6 42.0 L75.3 32.7" stroke-width="0.67"/><path d="M91.3 70.5 L84.5 65.2 L75.9 59.9" stroke-width="0.47"/><path d="M100.0 100.0 L102.1 89.5 L103.0 78.7 L103.6 68.0 L104.2 57.2 L107.2 46.9 L109.7 36.4 L112.8 26.1" stroke-width="0.51"/><path d="M100.0 100.0 L105.8 90.6 L113.1 82.3 L118.3 72.5 L124.7 63.5 L131.4 54.7 L138.6 46.3 L145.4 37.5" stroke-width="0.92"/><path d="M100.0 100.0 L110.8 96.8 L121.9 94.2 L132.8 91.6 L143.4 87.6 L154.4 84.8 L165.4 82.1 L176.1 78.6" stroke-width="0.87"/><path d="M154.4 84.8 L156.8 80.8 L158.6 76.9" stroke-width="0.61"/><path d="M109.0 99.6 A9 9 0 0 1 106.9 105.8" stroke-width=".6"/><path d="M98.8 91.1 A9 9 0 0 1 103.4 91.7" stroke-width=".6"/><path d="M99.2 91.0 A9 9 0 0 1 104.5 92.2" stroke-width=".6"/><path d="M91.6 103.3 A9 9 0 0 1 91.6 96.9" stroke-width=".6"/><path d="M113.0 107.5 A15 15 0 0 1 105.2 114.1" stroke-width=".6"/><path d="M114.7 102.8 A15 15 0 0 1 110.4 110.8" stroke-width=".6"/><path d="M85.1 101.8 A15 15 0 0 1 85.8 95.1" stroke-width=".6"/><path d="M95.2 85.8 A15 15 0 0 1 103.7 85.5" stroke-width=".6"/></g>
+          </g>
+          <ellipse cx="100" cy="100" rx="7.5" ry="6.5" fill="url(#crater)"/>
+          <circle cx="99" cy="99" r="1.6" fill="#fff"/>
+        </svg>
+        <span class="sheen"></span>
         <span class="coin">tamaño de una moneda de 2 €</span>
       </div>
       <label class="field">
@@ -82,10 +94,12 @@
 
   <!-- TINTADO -->
   <section id="tintado" class="tint">
-    <div class="tint-view" aria-hidden="true">
-      <div class="scene"><span class="sun"></span><span class="hill h1"></span><span class="hill h2"></span></div>
-      <div class="film"></div>
-      <div class="frame"></div>
+    <div class="tint-view" aria-label="Comparativa antes y después del tintado; arrastra para comparar">
+      <img class="view" src="assets/img/carretera.jpg" alt="" loading="lazy">
+      <div class="tinted"><img class="view" src="assets/img/carretera.jpg" alt="" loading="lazy"><div class="film"></div></div>
+      <div class="reflect"></div>
+      <div class="divider"><span class="knob"></span></div>
+      <span class="tag-l">Sin lámina</span><span class="tag-r">Con lámina <b class="vlt-tag">35 %</b></span>
     </div>
     <div class="tint-copy">
       <p class="kicker">Tintado de lunas</p>
