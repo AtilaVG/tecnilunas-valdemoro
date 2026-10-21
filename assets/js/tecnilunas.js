@@ -154,8 +154,9 @@
   function setTint(b) {
     tb.forEach(function (x) { x.setAttribute('aria-checked', x === b ? 'true' : 'false'); x.tabIndex = x === b ? 0 : -1; });
     var v = parseInt(b.getAttribute('data-v'), 10);
-    film.style.setProperty('--tint', (1 - v / 100) * .95);
+    film.style.setProperty('--tint', (1 - v / 100) * .92);
     vlt.textContent = v + ' %';
+    document.querySelector('.vlt-tag').textContent = v + ' %';
   }
   tb.forEach(function (b, i) {
     b.addEventListener('click', function () { setTint(b); });
@@ -165,6 +166,11 @@
     });
   });
   setTint(document.querySelector('.tint-steps [aria-checked="true"]'));
+  var tv = document.querySelector('.tint-view'), dragging = false;
+  function split(e) { var r = tv.getBoundingClientRect(); tv.style.setProperty('--split', (clamp((e.clientX - r.left) / r.width) * 100).toFixed(1) + '%'); }
+  tv.addEventListener('pointerdown', function (e) { dragging = true; split(e); });
+  window.addEventListener('pointermove', function (e) { if (dragging) split(e); });
+  window.addEventListener('pointerup', function () { dragging = false; });
 
   /* ---------- Tarjetas: brillo que sigue al ratón ---------- */
   [].forEach.call(document.querySelectorAll('.card'), function (c) {
