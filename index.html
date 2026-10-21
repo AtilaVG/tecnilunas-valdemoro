@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tecnilunas · Lunas, reparación de impactos y tintado en Valdemoro (propuesta)</title>
+<meta name="description" content="Propuesta de rediseño no oficial para Tecnilunas, especialistas en lunas de vehículos en el P.I. Albresa de Valdemoro.">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 24 9 8h14l5 16z' fill='%232f55ff'/%3E%3Cpath d='M11 10h6l-4 12H7z' fill='%23fff' opacity='.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/franja-propuesta.css">
+<link rel="stylesheet" href="assets/css/tecnilunas.css">
+</head>
+<body>
+<div class="proto-bar" role="note">
+  <strong>Propuesta de rediseño no oficial — creada por Alex</strong>
+  · Contacto: <a href="mailto:valorgonzalezalex@gmail.com">valorgonzalezalex@gmail.com</a>
+  · No es la web oficial de Tecnilunas (<a href="https://tecnilunasvaldemoro.com/" rel="nofollow noopener">web actual</a>).
+</div>
+
+<nav class="pill" aria-label="Principal">
+  <a class="logo" href="#inicio">tecni<span>lunas</span></a>
+  <div class="pill-links">
+    <a href="#reparar">¿Reparar?</a>
+    <a href="#tintado">Tintado</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#dudas">Dudas</a>
+  </div>
+  <a class="pill-cta" href="#contacto">Pedir cita</a>
+</nav>
+
+<main id="inicio">
+  <section class="intro" data-scrub data-src="assets/intro.mp4" aria-label="Presentación">
+    <div class="stage" data-scrub-stage>
+      <video muted playsinline preload="auto" aria-hidden="true"></video>
+      <canvas class="glass" aria-hidden="true"></canvas>
+      <div class="intro-copy">
+        <p class="kicker">Lunas de vehículos · Valdemoro</p>
+        <h1>Vuelve a <i>ver claro</i>.</h1>
+        <p class="sub">Cambiamos, reparamos y tintamos las lunas de tu coche, furgoneta o camión. En el taller o donde estés.</p>
+      </div>
+      <p class="hint" aria-hidden="true">Baja para limpiar el cristal</p>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Quiénes somos">
+    <p class="clear-text">Un impacto pequeño hoy es una luna rota mañana. <b>En Tecnilunas</b> lo miramos contigo, te decimos si se puede reparar y, si hay que cambiarla, lo hacemos con <i>cristal de calidad</i> y en el menor tiempo posible.</p>
+  </section>
+
+  <!-- ¿REPARAR O CAMBIAR? -->
+  <section id="reparar" class="repair">
+    <div class="repair-copy">
+      <p class="kicker">Herramienta rápida</p>
+      <h2>¿Se puede <i>reparar</i>, o hay que cambiarla?</h2>
+      <p>Mueve el control según el tamaño del impacto y dinos dónde está. Es orientativo: te lo confirmamos en cuanto lo veamos.</p>
+    </div>
+    <div class="repair-tool">
+      <div class="glass-sample" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="impact"><g class="crack" stroke="#13213d" stroke-width="1.4" stroke-opacity=".7" fill="none" stroke-linecap="round">
+          <circle cx="100" cy="100" r="6" fill="#13213d" fill-opacity=".5" stroke="none"/>
+          <path d="M100 100 L132 74 L160 66"/><path d="M100 100 L70 64 L58 30"/><path d="M100 100 L60 118 L22 120"/>
+          <path d="M100 100 L118 140 L130 180"/><path d="M100 100 L150 112 L188 104"/><path d="M100 100 L92 150 L78 176"/>
+        </g></svg>
+        <span class="coin">tamaño de una moneda de 2 €</span>
+      </div>
+      <label class="field">
+        <span>Tamaño del impacto <output id="size-out">1,5 cm</output></span>
+        <input id="size" type="range" min="0.5" max="6" step="0.5" value="1.5">
+      </label>
+      <fieldset class="seg">
+        <legend>¿Dónde está?</legend>
+        <label><input type="radio" name="zona" value="lejos" checked><span>Fuera de la vista del conductor</span></label>
+        <label><input type="radio" name="zona" value="vista"><span>Delante del conductor</span></label>
+        <label><input type="radio" name="zona" value="borde"><span>Cerca del borde</span></label>
+      </fieldset>
+      <div class="result" aria-live="polite">
+        <b class="r-title">Probablemente reparable</b>
+        <span class="r-text">Una reparación de impacto suele hacerse en poco tiempo y evita que la grieta avance.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TINTADO -->
+  <section id="tintado" class="tint">
+    <div class="tint-view" aria-hidden="true">
+      <div class="scene"><span class="sun"></span><span class="hill h1"></span><span class="hill h2"></span></div>
+      <div class="film"></div>
+      <div class="frame"></div>
+    </div>
+    <div class="tint-copy">
+      <p class="kicker">Tintado de lunas</p>
+      <h2>Más intimidad,<br><i>menos calor</i>.</h2>
+      <p>Elige la intensidad y mira cómo cambia. Usamos láminas homologadas y te asesoramos sobre qué cristales se pueden tintar.</p>
+      <div class="tint-steps" role="radiogroup" aria-label="Intensidad del tintado">
+        <button type="button" role="radio" aria-checked="false" data-v="70">Claro</button>
+        <button type="button" role="radio" aria-checked="true" data-v="35">Medio</button>
+        <button type="button" role="radio" aria-checked="false" data-v="15">Oscuro</button>
+        <button type="button" role="radio" aria-checked="false" data-v="5">Limo</button>
+      </div>
+      <p class="tint-read">Deja pasar aprox. <b id="vlt">35 %</b> de la luz</p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services">
+    <header class="services-head">
+      <p class="kicker">Servicios</p>
+      <h2>Todo lo que es <i>cristal</i><br>y algo más.</h2>
+    </header>
+    <div class="bento">
+      <article class="card c-big"><span class="num">01</span><h3>Sustitución de lunas</h3><p>Parabrisas, lunas laterales y traseras de turismos, furgonetas y camiones.</p></article>
+      <article class="card"><span class="num">02</span><h3>Reparación de impactos</h3><p>Paramos la grieta antes de que crezca.</p></article>
+      <article class="card"><span class="num">03</span><h3>Tintado</h3><p>Láminas homologadas, acabado limpio.</p></article>
+      <article class="card"><span class="num">04</span><h3>Bolas de enganche</h3><p>Montaje de enganches para remolque.</p></article>
+      <article class="card"><span class="num">05</span><h3>Manos libres</h3><p>Instalación de kits manos libres.</p></article>
+      <article class="card c-wide"><span class="num">06</span><h3>Servicio a domicilio</h3><p>Si no puedes venir, vamos nosotros: a tu casa o a tu trabajo. Consúltanos la zona.</p></article>
+    </div>
+    <p class="fleet"><span>Turismos</span><span>Furgonetas</span><span>Camiones</span></p>
+  </section>
+
+  <!-- DUDAS -->
+  <section id="dudas" class="faq">
+    <h2>Dudas <i>frecuentes</i></h2>
+    <details open><summary>¿Lo cubre mi seguro?</summary><p>Si tu póliza incluye rotura de lunas, normalmente sí. Tráenos tus datos y lo gestionamos contigo.</p></details>
+    <details><summary>¿Cuánto tarda un cambio de parabrisas?</summary><p>Depende del vehículo. Al darte cita te decimos el tiempo de trabajo y cuándo puedes volver a conducir con seguridad.</p></details>
+    <details><summary>¿Merece la pena reparar un impacto pequeño?</summary><p>Sí: con los cambios de temperatura y las vibraciones, un impacto puede convertirse en grieta. Repararlo a tiempo suele evitar cambiar la luna.</p></details>
+    <details><summary>¿Trabajáis con furgonetas y camiones?</summary><p>Sí, también con vehículos industriales. Llámanos con el modelo y te decimos plazos.</p></details>
+    <details><summary>¿Podéis venir a mi casa o al trabajo?</summary><p>Sí, hacemos servicio a domicilio. Consúltanos si llegamos a tu zona.</p></details>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="contact-card">
+      <p class="kicker">Pide cita</p>
+      <h2>Llámanos y lo<br><i>vemos claro</i>.</h2>
+      <div class="phones">
+        <a href="tel:+34918017516"><small>Taller</small>918 017 516</a>
+        <a href="tel:+34685878215"><small>Móvil</small>685 878 215</a>
+      </div>
+      <div class="meta">
+        <div><small>Dónde</small><p>Av. de Madrid 19, nave 4<br>P.I. Albresa · 28340 Valdemoro</p></div>
+        <div><small>Horario</small><p>Lunes a jueves<br>8:30–13:30 · 15:00–19:00<br><span class="muted">Viernes: consúltanos</span></p></div>
+        <div><small>Escríbenos</small><p><a href="mailto:tecnilunas@yahoo.com">tecnilunas@yahoo.com</a></p></div>
+      </div>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tecnilunas+Avenida+de+Madrid+19+Valdemoro" target="_blank" rel="noopener">Cómo llegar ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <a class="logo" href="#inicio">tecni<span>lunas</span></a>
+  <p>Tecnilunas S.L. · Lunas de vehículos en Valdemoro</p>
+  <p class="muted">Prototipo no oficial creado por Alex como propuesta de rediseño. Textos e ilustraciones propios; sin fotos ni logotipos del negocio.</p>
+</footer>
+
+<script src="assets/js/scroll-intro.js"></script>
+<script src="assets/js/tecnilunas.js"></script>
+</body>
+</html>
