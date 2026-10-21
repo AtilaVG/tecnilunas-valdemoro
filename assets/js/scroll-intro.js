@@ -41,7 +41,7 @@
       });
       video.addEventListener('error', fail);
       var source = document.createElement('source');
-      source.src = src; source.type = 'video/mp4';
+      source.src = src; source.type = /webm$/.test(src) ? 'video/webm' : 'video/mp4';
       source.addEventListener('error', fail);
       video.appendChild(source);
       video.load();
