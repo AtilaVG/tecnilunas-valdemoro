@@ -1,0 +1,5 @@
+/* _kit · franja de propuesta: solo lo funcional (visible, arriba, legible).
+   Colores/tipo: los hereda o los ajusta cada web con --proto-bg / --proto-fg. */
+.proto-bar{position:relative;z-index:1000;padding:7px 14px;text-align:center;font:500 12.5px/1.4 system-ui,sans-serif;
+  background:var(--proto-bg,#111);color:var(--proto-fg,#f2f2f2)}
+.proto-bar a{color:inherit;text-decoration:underline;text-underline-offset:2px}
